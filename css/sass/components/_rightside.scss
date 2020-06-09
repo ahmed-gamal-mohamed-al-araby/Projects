@@ -1,0 +1,166 @@
+.side-right {
+    .side-content {
+        margin-top: 30px;
+
+        .form-group {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: -2px;
+                right: -38px;
+                color: #FFF;
+                bottom: -3px;
+                background-color: $maincolor;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+
+            }
+        }
+
+        .category {
+            background-color: #FAFAFA;
+            padding: 20px;
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                li {
+                    padding-bottom: 10px;
+                    color: #000;
+                    position: relative;
+                    padding-left: 15px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    @include trans(.6s);
+                    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0px;
+                        content: "\f101";
+                        font-family: "FontAwesome";
+                        color: $maincolor;
+                    }
+
+                    &:hover {
+                        margin-left: 15px;
+                        @include trans(.6s);
+
+                        a {
+                            color: $maincolor;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .related-post {
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            .media {
+                .media-body {
+                    p {
+                        margin-bottom: 0;
+                        line-height: 1.7;
+                        color: #555;
+                        @include trans(.6s);
+
+                        &:hover {
+                            color: $maincolor;
+                            @include trans(.6s);
+                        }
+                    }
+
+                    span {
+                        margin-top: 8px;
+                        color: $maincolor;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .archive {
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                li {
+                    padding-bottom: 10px;
+                    color: #000;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    @include trans(.6s);
+
+                    &:hover {
+                        a {
+                            color: $maincolor;
+                            @include trans(.6s);
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .post-tags {
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 15px 20px;
+                    background-color: #FFF;
+                    border: 1px solid rgba(0, 0, 0, .1);
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    @include trans(.6s);
+                    &:hover {
+                        @include trans(.6s);
+                        background-color: $maincolor;
+                        a {
+                            color: #FFF;
+                            @include trans(.6s);
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+
+            }
+        }
+    }
+}

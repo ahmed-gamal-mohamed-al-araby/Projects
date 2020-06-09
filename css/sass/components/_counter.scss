@@ -1,0 +1,32 @@
+.count {
+    position: relative;
+    color: #FFF;
+    @include cover;
+    padding: 100px;
+    background-position: center center;
+    width: 100%;
+    margin-top: 100px;
+
+    @media #{$maxpad} {
+        padding: 50px;
+    }
+
+    @media #{$maxpad} {
+        margin-top: 50px;
+    }
+
+    .overlay {
+        z-index: 0;
+        background-color: rgba(0, 0, 0, .8);
+    }
+
+    .count-box {
+        margin-bottom: 30px;
+        z-index: 1;
+
+        p {
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+    }
+}

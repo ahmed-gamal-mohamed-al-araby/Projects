@@ -1,0 +1,103 @@
+.best-team-home3 {
+    padding-top: 50px;
+    overflow: hidden;
+
+    .box-team {
+        h1 {
+            font-family: serif;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+    }
+
+    .team-wrap {
+        &:hover {
+            .team-img {
+                .team-hover {
+                    ul {
+                        li {
+                            @include scalx(1);
+                            @include trans(.6s);
+
+                            &:nth-child(1) {
+                                @include delay (140ms);
+                            }
+
+                            &:nth-child(2) {
+                                @include delay (240ms);
+                            }
+
+                            &:nth-child(3) {
+                                @include delay (340ms);
+                            }
+
+                            &:nth-child(4) {
+                                @include delay (440ms);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .team-info {
+                @include scaly(1);
+                @include trans(.6s);
+
+            }
+        }
+
+        padding-top: 30px;
+        overflow: hidden;
+
+        .team-img {
+            position: relative;
+            overflow: hidden;
+
+            .team-hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                ul {
+                    li {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        background-color: $maincolor;
+                        color: #FFF;
+                        @include scalx(0);
+                        @include origin(left);
+                        @include trans(.6s);
+                    }
+                }
+            }
+        }
+
+        .team-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: $maincolor;
+            color: #FFF;
+            padding: 15px 20px;
+            @include scaly(0);
+            @include trans(.6s);
+            @include origin(bottom);
+
+            h4 {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+
+            span {
+                color: $secondcolor;
+                margin-top: 5px;
+            }
+        }
+
+    }
+}

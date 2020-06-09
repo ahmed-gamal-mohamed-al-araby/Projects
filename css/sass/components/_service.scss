@@ -1,0 +1,66 @@
+.our-service {
+    padding-top: 100px;
+    
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+
+    .service-box {
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            
+            @media #{$maxpad} {
+                margin-bottom: 0;
+                line-height: 2;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .card {
+        border: none;
+        color:#555;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        &:hover .card-body  {
+            background-color: $maincolor;
+            color: #FFF;
+        }
+        
+        &:hover .card-body a {
+            color: #FFF;
+        }
+        
+        &:hover .overlay-img {
+          background-color: rgba(0,0,0,.6);
+        }
+        .card-img {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        .card-body {
+            background-color: #FAFAFA;
+            h2 {
+                background-color: #000;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            a {
+                text-decoration: none;
+                color:#555;
+            }
+        }
+
+    }
+}

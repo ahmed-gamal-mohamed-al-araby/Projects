@@ -1,0 +1,162 @@
+.footer {
+    background-color: $maincolor;
+    color: #FFF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media #{$maxpad} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        p {
+            color: $secondcolor;
+        }
+
+        h5 {
+            &:nth-of-type(1) {
+                margin-bottom: 10px;
+            }
+
+            color: $secondcolor;
+            font-size:15px;
+        }
+
+        ul {
+            li {
+                margin-bottom: 10px;
+                color: $secondcolor;
+
+                i {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    .footer-link {
+        h3 {
+            margin-bottom: 20px;
+            color: $secondcolor;
+            font-size: 20px;
+        }
+
+        ul {
+            li {
+                padding-bottom: 10px;
+                position: relative;
+                font-size: 15px;
+                padding-left: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: $secondcolor;
+                }
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "\f105";
+                    font-family: fontawesome;
+
+                }
+
+                &:hover {
+                    margin-left: 10px;
+                    @include trans(.6s);
+
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-img {
+        margin-bottom: 20px;
+
+        h3 {
+            margin-bottom: 20px;
+            color: $secondcolor;
+            font-size: 20px;
+        }
+
+        .image {
+            position: relative;
+            display: inline-block;
+
+            img {
+                max-width: 80px;
+            }
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .2);
+                content: "";
+
+            }
+
+            &:hover {
+                &:before {
+                    background-color: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+    }
+
+    .footer-contact {
+        h3 {
+            margin-bottom: 20px;
+            color: $secondcolor;
+            font-size: 20px;
+        }
+
+        .form-group {
+            input {
+                border: 1px solid #FFF;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                border: 1px solid #FFF;
+                padding-left: 10px;
+                padding-top: 5px;
+            }
+        }
+
+        button {
+            &:hover {
+                border: 2px solid #FFF;
+            }
+        }
+    }
+
+}
+
+.copyright {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
+    color: $secondcolor;
+
+    i {
+        color: $maincolor;
+    }
+}

@@ -1,0 +1,43 @@
+.special-service {
+    padding-top: 100px;
+    
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+    
+    .special-box {
+        h1 {
+            font-family: serif;
+            @media #{$maxmobile} {
+                font-size: 23px;
+            }
+        }
+        
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+    }
+    
+    .special-info {
+        background-color: #FAFAFA;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        color: #555;
+        margin-top: 30px;
+        @include trans(.2s);
+        &:hover {
+            background-color: $maincolor;
+            color: #FFF;
+        }
+        
+        h3 {
+            font-family: serif;
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+    }
+}

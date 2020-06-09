@@ -1,0 +1,88 @@
+/* Start About */
+.about {
+    padding-top: 10%;
+    .about-img {
+         position: relative;
+        margin-bottom: 20px;
+        &:after {
+            position: absolute;
+            content: "";
+            z-index: 9;
+            left: 25px;
+            top: 20px;
+            opacity: .4;
+            width: 90%;
+            height: 90%;
+            border: 3px solid #FFF;
+        }
+    }
+    
+    .text-about {
+        padding-left: 20px;
+        
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        ul {
+            li {
+                position: relative;
+                padding-left: 25px;
+                line-height: 1.7;
+                color:#555;
+                font-size: 15px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    outline: 2px solid $maincolor;
+                    outline-offset: 2px;
+                    top: 10px;
+                    left: 5px;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $maincolor;
+                }
+                
+                @media #{$maxmobile} {
+                    font-size: 13px;
+                }
+                
+                }
+            }
+        }
+    }
+    
+    .about-info {
+        margin-top: 50px;
+        color:#FFF;
+        padding-left: 10px;
+        .box {
+            background-color: $maincolor;
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            i {
+                margin-bottom: 15px;
+            }
+            
+            h5 {
+                line-height: 1.7;
+                font-size: 17px;
+            }
+            
+            &:before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                opacity: .5;
+                border: 2px solid #FFF;
+                z-index: 2;
+            }
+        }
+    }
+/* End About */
+

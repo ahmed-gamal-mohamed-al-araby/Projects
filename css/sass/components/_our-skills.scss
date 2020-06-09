@@ -1,0 +1,76 @@
+.our-skills {
+    background-color: #F1F1F1;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    @media #{$maxpad} {
+        background-color: transparent;
+        margin-top: 0;
+
+        .img-skill {
+            visibility: hidden;
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .img-skill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .6);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            ;
+        }
+
+        img {
+            visibility: hidden;
+        }
+    }
+
+    .skill-info {
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        margin-left: 0;
+
+        @media #{$maxpad} {
+            padding-left: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-family: serif;
+        }
+
+        h5 {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .progress {
+            margin-bottom: 20px;
+
+            .progress-bar {
+                text-align: right;
+                background-color: $maincolor;
+                padding-right: 10px;
+            }
+        }
+    }
+}

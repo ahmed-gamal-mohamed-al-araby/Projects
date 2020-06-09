@@ -1,0 +1,75 @@
+.best-team-home2 {
+    padding-top: 50px;
+     overflow: hidden;
+    .box-team {
+        h1 {
+            font-family: serif;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+    }
+
+    .team-wrap {
+        padding-top: 30px;
+        overflow: hidden;
+        .team-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-info {
+            background-color: $maincolor;
+            color:#FFF;
+            padding: 15px 20px;
+            h4 {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+            span {
+                color: $secondcolor;
+                margin-top: 5px;
+            }
+        }
+        
+        .overlay {
+            color: #FFF;
+            background-color: rgba(0,0,0,.8);
+            padding-top: 70px;
+            h5 {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+            
+            span {
+                margin-top: 5px;
+                color: $maincolor;
+            }
+            
+            p {
+                color:#FAFAFA;
+                line-height: 1.7;
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    background-color: #FFF;
+                    color: #000;
+                    border-radius: 50%;
+                    @include trans(.6s);
+                    &:hover {
+                        background-color: $maincolor;
+                        color: #FFF;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

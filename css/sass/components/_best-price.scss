@@ -1,0 +1,158 @@
+.best-price {
+    padding-top: 100px;
+    
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+    .box-price {
+        h1 {
+            font-family: serif;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+    }
+
+    .item {
+        padding-top: 30px;
+
+        &:hover {
+            .card {
+
+                .card-header,
+                .card-footer {
+
+                    background-image: linear-gradient(to left, #2b32b2, #1488cc);
+
+                }
+            }
+        }
+
+        .card {
+
+            .card-header,
+            .card-footer {
+                background-image: linear-gradient(to left, #1488cc, #2b32b2);
+                color: #FFF;
+            }
+
+            .card-title {
+                padding: 20px;
+                font-size: 40px;
+
+                span {
+                    font-weight: bold;
+                }
+
+                sub {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .card-body {
+                background-color: #F1F1F1;
+
+                ul {
+                    li {
+                        color: #555;
+                        padding: 8px;
+                        border-bottom: 1px solid #FAFAFA;
+
+                        &:nth-child(1) {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .switcher {
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        @include trans(.6s);
+
+        .switcher-wrap {
+            @include trans(.6s);
+
+            span {
+                font-size: 17px;
+
+                &.active {
+                    color: $maincolor;
+                }
+
+                &:first-child {
+                    margin-right: 120px;
+                }
+            }
+        }
+
+        .switch-box {
+            width: 80px;
+            height: 20px;
+            position: absolute;
+            left: 50.5%;
+            top: 3px;
+            @include latex(-50%);
+
+            .switch-slide {
+                background-color: $maincolor;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                @include trans(.6s);
+                border-radius: 30px;
+                cursor: pointer;
+
+                &:before {
+                    background-color: #FFF;
+                    position: absolute;
+                    content: "";
+                    width: 40px;
+                    height: 15px;
+                    left: 2px;
+                    bottom: 3px;
+                    border-radius: 15px;
+                    @include trans(.6s);
+                }
+            }
+
+            .pricing-slide-off {
+                &:before {
+                    @include latex(35px);
+                }
+            }
+        }
+    }
+
+
+    .price-table {
+        position: relative;
+
+        .price-grid {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            visibility: hidden;
+            opacity: 0;
+            @include trans(.6s);
+            margin-left: 0;
+        }
+
+        .active-price {
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            @include trans(.6s);
+        }
+    }
+
+}

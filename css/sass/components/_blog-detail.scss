@@ -1,0 +1,135 @@
+.blog-detail {
+    margin-top: 100px;
+    .blog-img {
+        margin-bottom: 30px;
+    }
+
+    .blog-content {
+        margin-right: 30px;
+        h5 {
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        blockquote {
+            background-color: #6999D3;
+            padding: 20px;
+            border-left: 5px solid $maincolor;
+            color: #FFF;
+            font-style: italic;
+            line-height: 1.7;
+            border-radius: 10px;
+        }
+
+        ul {
+            color: #555;
+
+            li {
+                position: relative;
+                padding-left: 20px;
+
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $maincolor;
+                    content: "";
+                }
+            }
+
+        }
+
+        .comment {
+            margin-top: 30px;
+
+            h1 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            .media {
+                margin-bottom: 20px;
+                border: 1px solid rgba(0, 0, 0, .1);
+                padding: 20px;
+
+                &:nth-child(3),
+                &:nth-child(5) {
+                    margin-left: 30px;
+                }
+
+                &:nth-child(4),
+                &:nth-child(6) {
+                    margin-left: 60px;
+                }
+
+                img {
+                    border-radius: 50%;
+                }
+
+                .media-body {
+                    margin-left: 15px;
+
+                    h3 {
+                        display: inline-block;
+                        margin-right: 20px;
+                        font-size: 20px;
+                    }
+
+                    span {
+                        color: #888;
+                    }
+
+                    p {
+                        color: #888;
+                        line-height: 1.7;
+                        font-size: 15px;
+                        margin-bottom: 5px;
+                    }
+
+                    a {
+                        color: #888;
+                        text-decoration: none;
+                        font-style: italic;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            form {
+                margin-top: 30px;
+
+                h1 {
+                    font-size: 23px;
+                }
+
+                .form-group {
+
+                    input[type="text"] {
+                        width: 48%;
+                        float: $floatleft;
+                        margin-bottom: 15px;
+                        margin-right: 2%;
+                    }
+                }
+
+                textarea {
+                    margin-bottom: 15px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+    
+    
+    .side-content {
+            margin-top: 0;
+    }
+}

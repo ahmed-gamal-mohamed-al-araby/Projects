@@ -1,0 +1,77 @@
+/* Start Slider */
+
+.slide-example {
+    position: relative;
+    .carousel-caption {
+        bottom: 25%;
+        
+        @media #{$maxpad} {
+            bottom: 5%;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: normal;
+            color: #FEFEFE;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            
+            @media #{$maxpad} {
+                margin-bottom: 0;
+                line-height: 1.6;
+                font-size: 20px;
+            }
+        }
+
+        p {
+            color: $secondcolor;
+            line-height: 1.8;
+            
+            @media #{$maxpad} {
+                line-height: 2;
+                font-size: 15px;
+            }
+        }
+        
+        .m-btn1 {
+            @media #{$maxpad} {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 45%;
+        background-color: $maincolor;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 50px;
+        opacity: 1;
+        right: -100px;
+        @include trans(.5s);
+        
+        @media #{$maxpad} {
+            
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+    .carousel-control-prev {
+        left: -100px;
+    }
+
+    &:hover .carousel-control-prev {
+        left: 0;
+    }
+
+    &:hover .carousel-control-next {
+        right: 0;
+    }
+}
+
+
+/* End Slider */

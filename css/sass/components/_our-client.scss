@@ -1,0 +1,57 @@
+.our-client {
+    padding-top: 100px;
+    
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-family: serif;
+    }
+
+    p {
+        color: #555;
+        line-height: 1.7;
+          @media #{$maxpad} {
+            font-size: 15px;
+        }
+    }
+
+    .item {
+        padding-top: 30px;
+        .item-info {
+            background-color: $maincolor;
+            padding: 20px;
+            color:#FFF;
+            h5 {
+                margin-bottom: 5px;
+            }
+
+            span {
+                font-size: 13px;
+                color: $secondcolor;
+            }
+
+            ul {
+                margin-top: 10px;
+                li {
+                    display: inline-block;
+                    color:#c5c53a;
+                }
+            }
+            
+            p {
+                color:#FFF;
+                font-size: 15px;
+                color:$secondcolor;
+            }
+        }
+        
+        .client-img {
+            img {
+                max-width: 60px;
+            }
+        }
+    }
+}

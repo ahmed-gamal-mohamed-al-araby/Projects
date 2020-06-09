@@ -1,0 +1,147 @@
+.creativ {
+    padding-top: 100px;
+
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-family: serif;
+    }
+
+    p {
+        color: #555;
+        line-height: 1.7;
+        @media #{$maxpad} {
+            font-size: 15px;
+        }
+    }
+
+    .card {
+        border: none;
+        padding-top: 30px;
+        margin-bottom: 20px;
+
+        &:hover {
+
+            .card-img {
+
+                &:before,
+                &:after {
+                    width: 50%;
+                }
+            }
+
+            .card-body {
+                &:before {
+                    width: 50%;
+                    @include trans(.6s);
+                }
+
+                &:after {
+                    width: 50%;
+                    @include trans(.6s);
+                }
+            }
+        }
+
+        .card-img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                background-color: rgba(0, 0, 0, .5);
+                width: 0;
+                height: 100%;
+                content: "";
+                @include trans(.6s);
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+
+        .card-body {
+            border-bottom: 1px solid #555;
+            padding-bottom: 0;
+            padding: 15px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+
+            &:before,
+            &:after {
+                position: absolute;
+                bottom: 0;
+                background-color: $maincolor;
+                width: 50px;
+                height: 2px;
+                content: "";
+                z-index: 1;
+                @include latey(50%);
+                @include trans(.6s);
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+
+            ul {
+                color: #555;
+
+                li {
+                    display: inline-block;
+
+                    i {
+                        margin: 4px;
+
+                        @media #{$maxmobile} {
+                            margin: 1px;
+                        }
+                        
+                    }
+
+                }
+            }
+
+            h4 {
+                @include trans (.5s);
+                font-size: 20px;
+
+                &:hover {
+                    color: $maincolor;
+                }
+            }
+
+            p {
+                color: #555;
+                line-height: 1.7;
+            }
+
+            button {
+                color: #333;
+                border: 1px solid $maincolor;
+                padding: 8px 20px;
+
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

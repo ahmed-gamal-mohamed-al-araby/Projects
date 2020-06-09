@@ -1,0 +1,96 @@
+.our-work {
+    padding-top: 100px;
+    
+    @media #{$maxpad} {
+        padding-top: 50px;
+    }
+    
+    h1 {
+        margin-bottom: 15px;
+    }
+    
+    p {
+        color: #555;
+        
+        @media #{$maxpad} {
+            line-height: 2;
+            font-size: 15px;
+        }
+    }
+    
+    .mix-btn {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .m-btn {
+            padding: 10px 40px;
+            background-color: $maincolor;
+            color:#FFF;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            border: none;
+            &:before {
+            position: absolute;
+            right: -30px;
+            top: 0;
+            z-index: -9;
+            width: 50px;
+            height: 100%;
+            background-color: #0552b1;
+            content: "";
+            @include skews(-48deg);
+            }
+        } 
+        
+        .active {
+            background-color: #0552b1;
+            color:#FFF;
+            &:before {
+            position: absolute;
+            right: -30px;
+            top: 0;
+            z-index: -9;
+            width: 55px;
+            height: 100%;
+            background-color: $maincolor;
+            content: "";
+            @include skews(-48deg);
+            }
+        }
+    }
+    
+    .img-work {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 30px;
+            overflow: hidden;
+            background-color: $maincolor;
+            width: 100%;
+            height: 100%;
+            color:#FFF;
+            padding-top: 15%;
+            i {
+                color:#000;
+                background-color: #FFF;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            p {
+                color:#FFF;
+            }
+        }
+    }
+}

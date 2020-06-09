@@ -1,0 +1,147 @@
+.best-team {
+    margin-top: 100px;
+    
+     @media #{$maxpad} {
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-family: serif;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .team-wrap {
+        padding-bottom: 90px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        margin-top: 50px;
+
+        .team-img {
+            position: relative;
+            z-index: 9;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                content: "";
+                opacity: 0;
+                z-index: 9;
+                @include trans(.6s);
+                @include scaly(0);
+                @include origin (top);
+            }
+
+            img {
+                @include trans(.6s);
+            }
+            
+            /* Home 3 */ 
+            
+        }
+
+        &:hover {
+            .team-img {
+                &:before {
+                    @include scaly(1);
+                    opacity: .5;
+                }
+
+                img {
+                    @include latey(-10px);
+                }
+            }
+
+            .team-content {
+                height: 125px;
+
+                ul {
+                    opacity: 1;
+
+                    li {
+                        @include latey(0);
+
+                        &:nth-child(1) {
+                            @include delay (100ms);
+                        }
+
+                        &:nth-child(2) {
+                            @include delay (200ms);
+                        }
+
+                        &:nth-child(3) {
+                            @include delay (300ms);
+                        }
+
+                        &:nth-child(4) {
+                            @include delay (400ms);
+                        }
+                    }
+                }
+            }
+        }
+
+        .team-content {
+            height: 90px;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            text-align: center;
+            overflow: hidden;
+            @include trans(.6s);
+            z-index: 9;
+            color: #FFF;
+
+            .team-info {
+                background: #296dc1;
+                padding: 20px;
+
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+
+                span {
+                    color: $secondcolor;
+                    font-size: 14px;
+                }
+            }
+
+            ul {
+                opacity: 0;
+                margin-right: 30px;
+                margin-top: 10px;
+
+                li {
+                    @include latey(40px);
+                    @include trans(.6s);
+                    display: inline-block;
+                    a {
+                        background: #fff;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        display: block;
+                        text-decoration: none;
+                        color: #000;
+                        @include trans(.6s);
+                        &:hover {
+                            background-color: $threecolor;
+                            color: #FFF;
+                            @include trans(.6s);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@mixin prefix {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+@mixin cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin skews ($r) {
+    -webkit-transform: skewX($r);
+    -moz-transform: skewX($r);
+    -o-transform: skewX($r);
+    -ms-transform: skewX($r);
+    transform: skewX($r);
+}
+
+@mixin trans($s) {
+    -webkit-transition: all $s ease;
+       -moz-transition: all $s ease; 
+         -o-transition: all $s ease;
+            transition: all $s ease;
+}
+
+@mixin late($d) {
+     -webkit-transform: translate($d);
+        -moz-transform: translate($d);
+          -o-transform: translate($d);
+             transform: translate($d);
+}
+
+@mixin latey($d) {
+     -webkit-transform: translateY($d);
+        -moz-transform: translateY($d);
+          -o-transform: translateY($d);
+             transform: translateY($d);
+}
+
+
+@mixin latex($d) {
+     -webkit-transform: translateX($d);
+        -moz-transform: translateX($d);
+          -o-transform: translateX($d);
+             transform: translateX($d);
+}
+
+
+@mixin scaly($d) {
+     -webkit-transform: scaleY($d);
+        -moz-transform: scaleY($d);
+          -o-transform: scaleY($d);
+             transform: scaleY($d);
+}
+
+@mixin scalx($d) {
+     -webkit-transform: scaleX($d);
+        -moz-transform: scaleX($d);
+          -o-transform: scaleX($d);
+             transform: scaleX($d);
+}
+
+@mixin scal($d) {
+     -webkit-transform: scale($d);
+        -moz-transform: scale($d);
+          -o-transform: scale($d);
+             transform: scale($d);
+}
+
+@mixin origin($d) {
+     -webkit-transform-origin: $d;
+        -moz-transform-origin: $d;
+          -o-transform-origin: $d;
+             transform-origin: $d;
+}
+
+@mixin delay($d) {
+     -webkit-transition-delay: $d;
+        -moz-transition-delay: $d;
+          -o-transition-delay: $d;
+             transition-delay: $d;
+     
+}
+
+@mixin rotat($d) {
+        -webkit-transform: rotate($d);
+           -moz-transform: rotate($d);
+             -o-transform: rotate($d);
+                transform: rotate($d);
+}
